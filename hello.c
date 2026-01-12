@@ -23,4 +23,15 @@ int main()
     // string
     char string[] = "Rinkal";
     printf("string is %s\n", string);
+
+    // getting integer type of input from user
+    int num;
+
+    printf("Your favourite digit in 0 to 9: ");
+    scanf("%d", &num); //& defines address of variable, where to store user input(is like pointer)
+
+    printf("Hope %d helps in your luck too!\n", num);
+    return 0;
+
+
 }
