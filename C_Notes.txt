@@ -33,3 +33,27 @@ _________  _________
    %x       hexadecimal       
    %o       octal             
    %p       address (pointer) 
+
+* Header files
+* ____________
+
+→ Ends with .h
+→ if any header file containing functions, then it only containes functional declaration, not definition.
+
+2 types of header files:
+    → "System defined" header file:
+        #incluse <stdio.h>
+        written inside angular brackets
+
+    → "User defined" header files:
+        #include "sum.h"
+        writte inside double quotes.
+
+System defined header files:
+
+stdio.h: input/output
+stdlib.h: memory allocation
+string.h: string functions
+math.h: math functions
+time.h: date and time
+
