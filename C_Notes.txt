@@ -1,0 +1,35 @@
+→ C is a procedural, general purpose and compiled programming language.
+
+* Data types:
+* __________
+
+→ int
+→ float
+→ double
+→ char
+    (there is no string data type, 
+    if i want to declare a string, than can be declared by array of characters. 
+    e.g.
+    char[] name = "Rinkal")
+
+* printf with data types:
+* _______________________
+
+→ in C, only label is not enough to print the values after that sentence, we must define which values will be filling in that space.
+→ usually in java we write like this: 
+    System.out.print("Value of a is: " + a);
+
+→ but in c we define like this(filing entire sentence in double quotes, define data type of value in the place of value):
+    printf("Value of a is: %d" , a);
+
+Specifier  Data Type
+_________  _________   
+      
+   %d       int               
+   %f       float             
+   %lf      double            
+   %c       char              
+   %s       string            
+   %x       hexadecimal       
+   %o       octal             
+   %p       address (pointer) 
