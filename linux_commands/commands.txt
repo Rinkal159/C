@@ -1,0 +1,59 @@
+* Common CLI commands:
+* ___________________
+
+^ cd: 
+    → Move to another directory.
+    &→ One parameter:
+        The folder where you want to go
+
+^ ls:
+    → To list all the files inside that directory.
+    &→ No parameter.
+
+^ mkdir:
+    → To create a directory.
+    &→ One parameter:
+        Directory name
+
+^ rmdir:
+    → To remove a directory.
+    &→ One parameter:
+        Directory name
+
+^ touch:
+    → To create a file.
+    &→ One parameter:
+        File name
+
+^ rm:
+    → To remove a file.
+    &→ One parameter:
+        File name
+
+^ cp:
+    → To copy a file.
+    &→ Two parameters:
+        first: The file you want to copy.
+        second: The new file you want to make from that file.
+    e.g.:
+        cp hello.c copy.c
+        a new file called copy.c will be created, and the comntent of copy and hello will be the same.
+
+^ mv:
+    → It provides "two" services.
+
+    ^ first: Move a file to another directory.
+    &→ Two parameters:
+        first: File name you want to move.
+        second: The directory where you want to move that file.
+    e.g.:
+        mv hello.c learn/
+        This will move hello.c to learn folder.
+    
+    ^ second: To rename a file.
+    &→ Two parameters: 
+        first :Filename you want to rename.
+        second: The new file name.
+    e.g:
+        mv hello.c newHello.c
+        This will rename a file hello.c to newHello.c
