@@ -57,3 +57,12 @@ string.h: string functions
 math.h: math functions
 time.h: date and time
 
+* Function in C:
+→ It is same like java.
+
+e.g.
+int greet(charname[50]) {
+    printf("Hello, %s\n", name);
+}
+
+→ Prototype: Function Declaration(return type, function name and parameter list)
