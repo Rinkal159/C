@@ -10,12 +10,12 @@
     (there is no string data type, 
     if i want to declare a string, than can be declared by array of characters. 
     e.g.
-    char[] name = "Rinkal")
+    char name[] = "Rinkal")
 
 * printf with data types:
 * _______________________
 
-→ in C, only label is not enough to print the values after that sentence, we must define which values will be filling in that space.
+→ in C, only label is not enough to print the values after that sentence, we must define which values will be filled in that space.
 → usually in java we write like this: 
     System.out.print("Value of a is: " + a);
 
