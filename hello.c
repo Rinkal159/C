@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void greet(char name[50]);
+
 int main()
 {
     printf("Hello world!\n");
@@ -92,6 +94,10 @@ int main()
     //* Functions
     greet("Rinkal");
 
+    //* Truncation
+    int x = 2;
+    int y = 3;
+    printf("%f\n", (float)x / y); // if %i then only 0 because of int, but if %f then result will be in float.
 
     return 0;
 }
