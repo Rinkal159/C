@@ -1,27 +1,9 @@
+#include <string.h>
 #include <stdio.h>
 
 int main()
 {
-    // int n;
-    // printf("How many numbers you want to add? : ");
-    // scanf("%d", &n);
-
-    // int marks[n];
-    // int sum = 0;
-
-    // for (int i = 0; i < n; i++)
-    // {
-    //     printf("Number %d: ", i + 1);
-    //     scanf("%d", &marks[i]);
-    //     sum += marks[i];
-    // }
-
-    // printf("Sum of these %d numbers are %d\n", n, sum);
-
-    //&------------------------------------------------------------------------------------------------
-
-    //* Array
-
+    //* ARRAY CORE
     // int arr[] = {1, 2, 3, 4, 5.5};
     // printf("%d\n", arr[0]);
 
@@ -47,17 +29,100 @@ int main()
 
     //&------------------------------------------------------------------------------------------------
 
-    int num = 12;
-    printf("%f\n", num); // 0.0000
+    //* ADDITION, number of elements and elements are getting from the user
+    // int n;
+    // printf("How many numbers you want to add? : ");
+    // scanf("%d", &n);
 
-    char c = 'A';
-    printf("%d\n", c); // 65
+    // int marks[n];
+    // int sum = 0;
 
-    char name[] = "abc";
-    printf("%i\n", name);    // gives the address of name
-    // printf("%s\n", name[0]); // segmentation fault
-    // correct way 👇🏻
-    printf("%c\n", name[0]); //prints character on that index
-    printf("%i\n", name[0]); //prints ASCII value of that charcater present on that index
-    printf("%s\n", name); //print whole string
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("Number %d: ", i + 1);
+    //     scanf("%d", &marks[i]);
+    //     sum += marks[i];
+    // }
+
+    // printf("Sum of these %d numbers are %d\n", n, sum);
+
+    //&------------------------------------------------------------------------------------------------
+
+    //* TYPE CASTING
+    // int num = 12;
+    // printf("%f\n", num); // 0.0000
+
+    // char c = 'A';
+    // printf("%d\n", c); // 65
+
+    // char name[] = "abc";
+    // printf("%i\n", name);    // gives the address of name
+    // // printf("%s\n", name[0]); // segmentation fault
+    // // correct way 👇🏻
+    // printf("%c\n", name[0]); //prints character on that index
+    // printf("%i\n", name[0]); //prints ASCII value of that charcater present on that index
+    // printf("%s\n", name); //print whole string
+
+    //&------------------------------------------------------------------------------------------------
+
+    //* ARRAY OF CHARACTERS (STRING)
+    // char arr[] = "ab";
+    // printf("%d\n", sizeof(arr)); // 3
+    // printf("%d\n", arr[2]);      // 0
+    // printf("%c\n", arr[2]);      // nothing prints, because \0 is not visible character, it is NUL
+
+    //&------------------------------------------------------------------------------------------------
+
+    //* LENGTH STRING
+    // char arr[] = "rinkal";
+    // printf("%d\n", sizeof(arr) / sizeof(arr[0]) - 1); // length of string - way 1
+    // printf("%d\n", strlen(arr));                      // length of string - way 2
+
+    //&------------------------------------------------------------------------------------------------
+
+    //* GETTING STRING INPUT
+
+    // //* scanf : only takes first string, does not take strings after space.
+    // // char name[50];
+    // // printf("Name: ");
+    // // scanf("%s", name); //rinkal singapuri
+
+    // // printf("%s\n", name); //rinkal
+
+    // //* fgets : takes all th input + automatically prints new line
+    // char name[2];
+    // printf("Name: ");
+    // fgets(name, sizeof(name), stdin); // rinkal singapuri
+
+    // printf("%s", name); // rinkal singapuri
+
+    //&------------------------------------------------------------------------------------------------
+
+    //* PRINT STRING
+
+    // char name[] = "Rinkal";
+
+    // for (int i = 0, n = sizeof(name) / sizeof(name[0]); i < n; i++)
+    // {
+    //     printf("%c at %i\n", name[i], i);
+    // }
+    // printf("\n");
+
+    //&------------------------------------------------------------------------------------------------
+
+    //* CONVERT THE STRING UPPERCASE
+
+    char name[50];
+    printf("Name: ");
+    fgets(name, sizeof(name), stdin);
+
+    for (int i = 0, n = strlen(name); i < n; i++)
+    {
+        if (name[i] >= 'a' && name[i] <= 'z')
+        {
+            name[i] = name[i] - 32;
+        }
+    }
+
+    printf("%s", name);
 }
