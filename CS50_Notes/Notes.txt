@@ -7,3 +7,5 @@
         - assemling -> Converts the assembly code into source code, converts all the code including header files code.
         - linking -> linking our code with header files source code.
     → Array
+    → Array of characters (string)
+    → NUL / '\0'
