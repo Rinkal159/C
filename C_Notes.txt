@@ -34,13 +34,35 @@ _________  _________
    %o       octal             
    %p       address (pointer) 
 
+* Types and memory holdage 
+* ________________________
+
+→ byte: 1 byte
+
+→ char : 1 byte
+        → 1 byte is equals to 128 bites, therefore it can store elements from 0 to 127 in positive and -1 to -128 in negative
+
+→ int : 4 bytes
+        → It can store roughly 4 billion values, 2 billion postive and 2 billion negative.
+
+→ long : 8 byte
+
+→ float : 4 byte
+
+→ double : 8 byte
+
+→ boolean : 1 byte
+
+→ string : depends
+        → if string contains three characters, then 4 byte, if 5 them 6 bytes, +1 because of \0
+
 * Header files
 * ____________
 
 → Ends with .h
 → if any header file containing functions, then it only containes functional declaration, not definition.
 
-2 types of header files:
+^→ 2 types of header files:
     → "System defined" header file:
         #incluse <stdio.h>
         written inside angular brackets
@@ -49,7 +71,7 @@ _________  _________
         #include "sum.h"
         writte inside double quotes.
 
-System defined header files:
+^System defined header files:
 
 stdio.h: input/output
 stdlib.h: memory allocation
@@ -58,6 +80,8 @@ math.h: math functions
 time.h: date and time
 
 * Function in C:
+* ______________
+
 → It is same like java.
 
 e.g.
@@ -66,3 +90,30 @@ int greet(charname[50]) {
 }
 
 → Prototype: Function Declaration(return type, function name and parameter list)
+
+* Array:
+* ______
+
+→ to find length of array: sizeof(arr)/sizeof(arr[0])
+
+^→ array of characters means strings:
+    char arr[] = "ab";
+
+    → in the form of array: 
+        {'a', 'b', '\0'}
+    
+    → array of characters are null terminated, always ends with '\0' that is NUL and its ASCII value is 0, thats why arr[2] results 0. 
+    → array of characters always stores elements.length  + 1 in memory because of \0.
+
+* ZERO OR ONE?
+* ___________
+
+^ In conditionals:
+
+    → if the condition is "true", then returns "1".
+    → but if the condition is "false", then returns "0".
+
+^ In exit status:
+
+    → if everythign works fine, no issue, then it returns "0".
+    → but if there's some issue, then it returns "other than 0" but "positive" one.
