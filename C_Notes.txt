@@ -102,7 +102,7 @@ int greet(charname[50]) {
     → in the form of array: 
         {'a', 'b', '\0'}
     
-    → array of characters are null terminated, always ends with '\0' that is NUL and its ASCII value is 0, thats why arr[2] results 0. 
+    → array of characters are null terminated, always ends with '\0' that is NUL and its ASCII value is 0, thats why arr[2] in %i results 0. 
     → array of characters always stores elements.length  + 1 in memory because of \0.
 
 * ZERO OR ONE?
