@@ -78,6 +78,82 @@ stdlib.h: memory allocation
 string.h: string functions
 math.h: math functions
 time.h: date and time
+ctype.h: characters
+
+stdio.h :
+    printf() : prints 
+    scanf() : get input
+    fgets() : for string input
+
+    ^→ scanf:
+
+stdlib.h :
+    strtol() : string to int conversion
+    rand() : random number generation
+
+    ^→ strtol:
+
+    → it needs "3" arguments:
+        1. first : the name of the string which will be converted into int.
+        2. second : the address of the array of characters where the invalid part will be stored.
+        3. third : base. the string will be converted into 10(decimal), 8(octal), 2(binary), 16 (hexdecimal)   or something else.
+
+    → example:
+    
+        char string[] = "123abc";
+        char *invalid[];
+
+        strtol(string, &invalid, 10);
+
+        if(isalnumnvalid != "\0") {
+            printf("invalid part : %s", invalid);
+        } else {
+            printf("valid int");
+        }
+
+
+
+string.h : 
+    strlen() : length of the string (do not count '\0')
+    strcmp() : compares two strings
+    strcat() : concate strings
+    strchr() : substring from specified character, finding starts from left.
+    strstr() : substring from specified string
+    strrchr() : substring from specified charcter but finding starts from right.
+
+ctype.h :
+    isalpha() : if the character is an alphabet
+    isdigit() : if the character is a digit
+    isalnum() : if the character is an alphabet or a digit
+    islower() : if the character is in lower case
+    isupper() : if the character is in upper case
+    isspace() : if the character is a space
+
+    👆🏻 if true, then returns 1, else returns 0
+
+    toupper() : converts the character into upper case
+    tolower() : converts the character into lower case
+
+math.h :
+    ceil() : rounds up
+    floor() : rounds down
+    round() : rounds to nearest
+    trunc() : converts into int
+    fabc() : gives positive value
+    pow() : power 
+    sqrt() : square root of given value
+
+    → If i want only specific count of numbers after decimal point in double or float, do this 👇🏻
+        in float:
+            float num = 3.4567;
+            printf("%.2f", num); 
+
+        in double:
+            double num = 3.4567;
+            printf("%.2lf", num);
+
+
+
 
 * Function in C:
 * ______________
@@ -117,3 +193,8 @@ int greet(charname[50]) {
 
     → if everythign works fine, no issue, then it returns "0".
     → but if there's some issue, then it returns "other than 0" but "positive" one.
+
+
+strtol
+" %c" in scanf
+"%.rf" to only want 2 numbers after decimal
