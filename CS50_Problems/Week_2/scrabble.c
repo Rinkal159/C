@@ -37,13 +37,11 @@ int addPoints(int points[], char value[])
     int sum = 0;
     for (int i = 0, n = strlen(value) - 1; i < n; i++)
     {
-        if (isupper(value[i]) == 0)
+
+        value[i] = toupper(value[i]);
+        if (value[i] < 65 || value[i] > 90)
         {
-            value[i] = toupper(value[i]);
-            if (value[i] < 65 || value[i] > 90)
-            {
-                continue;
-            }
+            continue;
         }
 
         value[i] -= 65;
