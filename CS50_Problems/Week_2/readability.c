@@ -20,7 +20,7 @@ int main(void)
     l = (l / w) * 100;
     s = (s / w) * 100;
 
-    int index = trunc(round(0.0588 * l - 0.296 * s - 15.8));
+    int index = round(0.0588 * l - 0.296 * s - 15.8);
 
     if (index < 0)
     {
