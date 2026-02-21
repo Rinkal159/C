@@ -40,7 +40,6 @@ _________  _________
 → byte: 1 byte
 
 → char : 1 byte
-        → 1 byte is equals to 128 bites, therefore it can store elements from 0 to 127 in positive and -1 to -128 in negative
 
 → int : 4 bytes
         → It can store roughly 4 billion values, 2 billion postive and 2 billion negative.
@@ -105,7 +104,7 @@ stdlib.h :
 
         strtol(string, &invalid, 10);
 
-        if(isalnumnvalid != "\0") {
+        if(invalid != "\0") {
             printf("invalid part : %s", invalid);
         } else {
             printf("valid int");
@@ -195,6 +194,4 @@ int greet(charname[50]) {
     → but if there's some issue, then it returns "other than 0" but "positive" one.
 
 
-strtol
 " %c" in scanf
-"%.rf" to only want 2 numbers after decimal
