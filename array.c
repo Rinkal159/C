@@ -3,7 +3,7 @@
 
 int main()
 {
-    //* ARRAY CORE
+    //* Array Core
     // int arr[] = {1, 2, 3, 4, 5.5};
     // printf("%d\n", arr[0]);
 
@@ -29,28 +29,29 @@ int main()
 
     //&------------------------------------------------------------------------------------------------
 
-    //* ADDITION, number of elements and elements are getting from the user
-    // int n;
-    // printf("How many numbers you want to add? : ");
-    // scanf("%d", &n);
+    //* Addition of numbers, number of elements and elements are getting from the user
+    int n;
+    printf("How many numbers you want to add? : ");
+    scanf("%d", &n);
 
-    // int marks[n];
-    // int sum = 0;
+    int marks[n];
+    int sum = 0;
 
-    // for (int i = 0; i < n; i++)
-    // {
-    //     printf("Number %d: ", i + 1);
-    //     scanf("%d", &marks[i]);
-    //     sum += marks[i];
-    // }
+    for (int i = 0; i < n; i++)
+    {
+        printf("Number %d: ", i + 1);
+        scanf("%d", &marks[i]);
+        sum += marks[i];
+    }
 
-    // printf("Sum of these %d numbers are %d\n", n, sum);
+    printf("Sum of these %d numbers is %d\n", n, sum);
 
     //&------------------------------------------------------------------------------------------------
 
-    //* TYPE CASTING
+    //* Type casting
     // int num = 12;
     // printf("%f\n", num); // 0.0000
+    // printf("%f\n", (float)num); // 12.0000
 
     // char c = 'A';
     // printf("%d\n", c); // 65
@@ -65,7 +66,7 @@ int main()
 
     //&------------------------------------------------------------------------------------------------
 
-    //* ARRAY OF CHARACTERS (STRING)
+    //* Array of Characters (String)
     // char arr[] = "ab";
     // printf("%d\n", sizeof(arr)); // 3
     // printf("%d\n", arr[2]);      // 0
@@ -73,23 +74,23 @@ int main()
 
     //&------------------------------------------------------------------------------------------------
 
-    //* LENGTH STRING
-    // char arr[] = "rinkal";
-    // printf("%d\n", sizeof(arr) / sizeof(arr[0]) - 1); // length of string - way 1
-    // printf("%d\n", strlen(arr));                      // length of string - way 2
+    //* String length
+    // char arr[] = "ri";
+    // printf("%d\n", sizeof(arr) - 1); // length of string - way 1
+    // printf("%d\n", strlen(arr));     // length of string - way 2
 
     //&------------------------------------------------------------------------------------------------
 
-    //* GETTING STRING INPUT
+    //* Getting string input
 
-    // //* scanf : only takes first string, does not take strings after space.
-    // // char name[50];
-    // // printf("Name: ");
-    // // scanf("%s", name); //rinkal singapuri
+    // //^ scanf : only takes first string, does not take strings after space.
+    // char name[50];
+    // printf("Name: ");
+    // scanf("%s", name); //rinkal singapuri
 
-    // // printf("%s\n", name); //rinkal
+    // printf("%s\n", name); //rinkal
 
-    // //* fgets : takes all th input + automatically prints new line
+    // //^ fgets : takes all the input + automatically prints new line
     // char name[2];
     // printf("Name: ");
     // fgets(name, sizeof(name), stdin); // rinkal singapuri
@@ -98,7 +99,7 @@ int main()
 
     //&------------------------------------------------------------------------------------------------
 
-    //* PRINT STRING
+    //* Print string
 
     // char name[] = "Rinkal";
 
@@ -110,19 +111,19 @@ int main()
 
     //&------------------------------------------------------------------------------------------------
 
-    //* CONVERT THE STRING UPPERCASE
+    //* Convert to string uppercase
 
-    char name[50];
-    printf("Name: ");
-    fgets(name, sizeof(name), stdin);
+    // char name[50];
+    // printf("Name: ");
+    // fgets(name, sizeof(name), stdin);
 
-    for (int i = 0, n = strlen(name); i < n; i++)
-    {
-        if (name[i] >= 'a' && name[i] <= 'z')
-        {
-            name[i] = name[i] - 32;
-        }
-    }
+    // for (int i = 0, n = strlen(name); i < n; i++)
+    // {
+    //     if (name[i] >= 'a' && name[i] <= 'z')
+    //     {
+    //         name[i] = name[i] - 32;
+    //     }
+    // }
 
-    printf("%s", name);
+    // printf("%s", name);
 }
