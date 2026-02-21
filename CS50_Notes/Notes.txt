@@ -21,5 +21,12 @@
     → asymptotic notation : how fast an algorithm grows as input grows.
         when n becomes larger:
             this notation tells us:
-                - which algorithm is faste?
+                - which algorithm is faster?
                 - which one scales better?
+    → Struct
+    → Sorting
+    → Selection Sort
+    → Bubble Sort
+    → Recursion
+    → Print half pyraid using backtracking.
+    → Merge sort
