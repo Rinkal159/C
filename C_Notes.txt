@@ -194,4 +194,24 @@ int greet(charname[50]) {
     → but if there's some issue, then it returns "other than 0" but "positive" one.
 
 
-" %c" in scanf
+* " %c" in scanf:
+
+* #define <name> <value>:
+
+* char *name:
+
+
+* Remove \n (fgets edition):
+* _________________________
+
+^ Remove \n that fgets prints. (after input):
+
+    char name[50];
+    printf("Your name: ");
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = '\0';
+
+^ Remove \n that fgets considers as input. (before input):
+
+    getchar();
+    <fgets code>
