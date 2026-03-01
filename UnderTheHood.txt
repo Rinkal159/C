@@ -11,11 +11,11 @@ because
 → one F in hexadecimal equals to 15 - means 1111 in binary (10 in hexadimal equals to 16, and 0F is 15)
 → thus two F(FF) equlas to 1111 1111 thats sums ups to 255.
 
-→ Hexadicaml has a prefix pattern that indicates that any number follows this pattern indicates that this is a hexadecimal number.
-  → that prefix os '0x'
+→ Hexadicaml has a prefix pattern that indicates that any number follows this pattern is a hexadecimal number.
+  → that prefix is '0x'
     meaning, 
       decimal 16:
-        in binary - 10000
+        in binary - 0b10000
         in hexadecimal - 0x10
 
   
