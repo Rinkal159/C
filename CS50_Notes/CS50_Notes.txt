@@ -41,4 +41,8 @@
     → pointer
         int *p = &a;
             meaning, a "pointer" 'p' stores "address" of 'a'
+    → strcmp
+        s == t (it compares address of the firts characters of those two string)
+        strcmp(s, t) (it compares character by character)
+    → malloc and free 
 
