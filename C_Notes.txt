@@ -198,8 +198,6 @@ int greet(charname[50]) {
 
 * #define <name> <value>:
 
-* char *name:
-
 
 * Remove \n (fgets edition):
 * _________________________
@@ -215,3 +213,59 @@ int greet(charname[50]) {
 
     getchar();
     <fgets code>
+
+
+* NULL vs NUL:
+* ____________
+
+^ NULL : 
+    → It is related to pointer.
+    → Pointer always points to either a valid address or say "I point to nothing". and for that second thing, NULL exists.
+    → NULL says I don't point to 0, I point to nothing.
+
+    → we cannot dereference null, it returns "segmentation fault".
+    → ex. 
+        int *ptr = NULL;
+        *ptr = 10; 
+
+    → ALWAYS check if pointer is NULL when using malloc for memory allocation, because if memory is full, malloc returns NULL, so check earlier if it is NULL then end the program.
+    → ex.
+        char *og = "rinkal";
+        char *duplicate = malloc(sizeof(og));
+        if(duplicate == NULL) {
+            printf("Memory allocation failed.\n");
+            return 1;
+        }
+
+^ NUL : 
+    → NUL is null terminator for strings in C.
+    → it refers to '\0' which is always presents at the end of every string.
+    → ex.
+        char name[] = "hi";
+
+        name in memory:
+        ['hi', 'i', '\0']
+
+        → so the size of name is 3, not 2, because of NUL.
+        → NUL's int value is 0 and char value is invisible.
+
+* Valid memory vs garbage address:
+* ________________________________
+
+^ int *n;
+    → this creates a pointer n that point to int *, but does NOT allcoates memory so it stores at a "garbade address".
+
+^ int *n = malloc(sizeof(int));
+    → this creates a pointer n with valid memory address, "malloc" allocates memory for n.
+
+
+→ ex.
+    int *x = malloc(sizeof(int));
+    int *y ;
+
+    *x = 12; 
+    *y = 24; //how can you find the y from some random garbage address and assign the value
+
+    y = x; //instead give the address of x to y, now both points to same address, hence change of one value affects both.
+
+    *y = 24; //x = 24 and y == 24
