@@ -45,4 +45,9 @@
         s == t (it compares address of the firts characters of those two string)
         strcmp(s, t) (it compares character by character)
     → malloc and free 
+    → NULL
+    → valgrind (is like dubug50 - a debugger tool)
+    → swapping through pointers
+    → scanf
+    → file operation - fopen, fclose, fread, fwrite, fprintf, fscanf, fseek, etc..
 
