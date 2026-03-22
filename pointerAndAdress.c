@@ -9,12 +9,18 @@ void changeString(char *name);
 
 int main(void)
 {
+    // memory means RAM here
+
     // & - Gives the "memory address" of a variable.
     // * - "Pointer" that stores "memory address" of a variable, NOT its value
 
-    // If i dereference an int variable, then it returns the stored value,
-    // but If i dereference a string, then it returns the first character of string because it stores address of only first character in pointer.
-    // ex.
+    // Pointer, whose :
+    // "value" is a memory address.
+    // "type" describes the data located at that memory address.
+
+    // // If i dereference an int variable, then it returns the stored value,
+    // // but If i dereference a string, then it returns the first character of string because it stores address of only first character in pointer.
+    // // ex.
     // int a = 12;
     // int *p = &a;
     // printf("%i\n", *p); //12
@@ -54,7 +60,7 @@ int main(void)
 
     //* Pointer and Arrays of characters
 
-    // name and &name[0] are same, because name returns address of first character only.
+    // // name and &name[0] are same, because name returns address of first character only.
     // char name[] = "Rinkal";
     // printf("%p\n", &name);
     // printf("%p\n", &name[0]);
@@ -121,8 +127,17 @@ int main(void)
     // printf("%s\n", myName);
     // printf("%s\n", yourName);
 
-    
+    //& ----------------------------------------------------------------------------------------------------
 
+    int *p = NULL;
+    // printf("%i\n", *p);
+
+    int n = 15;
+    int *a, *b, *c = &n; //only c here is initialized with the address of n, *a and *b got garbage addresses
+    printf("%p\n", a);
+    printf("%p\n", b);
+    printf("%p\n", c);
+    printf("%p\n", &n);
 }
 
 void passByValue(int n)
