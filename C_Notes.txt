@@ -269,3 +269,83 @@ int greet(charname[50]) {
     y = x; //instead give the address of x to y, now both points to same address, hence change of one value affects both.
 
     *y = 24; //x = 24 and y == 24
+
+
+* getopt():
+* ________
+
+→ getopt() is used to get the options from command line arguments, options start from - meaning -a, -b are the options.
+→ getopt() automatically moves pointer ahead after one check.
+
+→ getopt() takes three parameters : argc, argv and the string of options that is valid
+→ example: 
+    char option = getopt(argc, argv, "abc"); //here only -a, -b, -c are valid options
+
+^ ? :
+    → getopt() returns ? when the option you entered in command line argument is invalid.
+    → example:
+        char option = getopt(argc, argv, "abc");
+        if(option == "?") {
+            printf("Invalid option\n");
+            return 1;
+        }
+
+        → commnad line argument:
+            program.exe -a //valid
+            program.exe -d //returns ? because 'd' is not defined in string of options
+
+    → and now getopt() moved one pointer ahead.
+
+^ -1:
+    → getopt() returns -1 when there are NO more "flags(options)" in command line argument.
+    → remember that, if there are more command line arguments but not options then it also returns -1.
+
+    → when it returns -1? 
+        when are no command line arguments
+        when there are command line arguments, but they are not options
+
+    → when it does not return -1?
+        when there is option
+
+    → example:
+        char option = getopt(argc, argv, "abc");
+        if (option == "?") {
+            printf("Invalid option\n");
+            return 1;
+        }
+
+        if (getopt(argc, argv, "abc") == -1) {
+            printf("No more options\n");
+        }
+
+        → command line arguments:
+            program.exe -a -b //here argv after -a is a flag then it does NOT return -1
+            program.exe -a file.c //here argv after -a is not a flag thus it returns -1
+
+
+^ optind:
+    → it tracks current position of getopt().
+    → it starts with 1 because argv[0] is the file name.
+
+    → when getopt() has performend, then it moves to next pointer.
+    → when there are no more options, then it points to first non-option.
+
+    → meaning,
+        example:
+            char option = getopt(argc, argv, "abc");
+            if (option == "?") {
+                printf("Invalid option\n");
+                return 1;
+            }
+
+            if (getopt(argc, argv, "abc") == -1) {
+                printf("No more options\n");
+                return 2;
+            }
+
+            → command line arguments:
+                program.exe -a file1 file2
+
+                here it first checks for -a, whether it is valid or not, if it is valid, then it automaticslly moves to next command line argument and at the same time optint becomes 2.
+
+                then it checks if next argv is an option or not, here it returns -1, because file1 is a command line arguments but it is not an option, thus program terminates and optint becomes 2, which indicates that there are no more options and that's why it points to first non-option.
